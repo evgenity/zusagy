@@ -9,10 +9,11 @@ body {
 	border-width: 3px;
 	background-color: rgba(217, 217, 217, 0.1);
 	border-block: white;
+	-webkit-appearance: none !important;
 }
 
 .btn:hover { 
-  background-color: rgba(217, 217, 217, 0.3)
+  background-color: rgba(217, 217, 217, 0.3);
 }
 
 .hero-main {
@@ -36,7 +37,7 @@ body {
 
 .hero {
 	position: fixed;
-	top: 60%;
+	top: 70%;
 	left: 0;
 	z-index: -1;
 	width: 50%;
@@ -44,5 +45,17 @@ body {
 
 .hero-img {
 	width: 100%;
+}
+
+.form-group {
+	padding-top: 10px;
+}
+
+#btn-start-challenge {
+	padding-top: 50px;
+}
+
+#link-for-friends {
+	text-decoration: underline;
 }
 
