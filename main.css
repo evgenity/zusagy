@@ -34,9 +34,15 @@ body {
 	margin: 10%;
 }
 
-/*#moto {
-	position: relative;
-	top: 2.5rem;
-	left: 1rem;
-	font-size: 0.3rem;*/
+.hero {
+	position: fixed;
+	top: 60%;
+	left: 0;
+	z-index: -1;
+	width: 50%;
 }
+
+.hero-img {
+	width: 100%;
+}
+
