@@ -59,3 +59,11 @@ body {
 	text-decoration: underline;
 }
 
+.hero-main-reporter {
+	position: fixed;
+	top: 60%;
+	left: 0;
+	width: 70%;
+	z-index: -1;
+}
+
