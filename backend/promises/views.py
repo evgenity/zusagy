@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import PromiseForm
 from promises.models import Promise
+from datetime import datetime, timezone
 
 # Create your views here.
 
@@ -41,4 +42,5 @@ def report(request, short_link):
         promise = Promise.objects.get(short_link=short_link)
     except Promise.DoesNotExist:
         raise Http404("Promise does not exist")
-    return render(request, 'promises/reporter-main.html', {'promise': promise})
+    day_num = (datetime.now(timezone.utc) - promise.pub_date).days + 1
+    return render(request, 'promises/reporter-main.html', {'promise': promise, 'day_num' : day_num})
