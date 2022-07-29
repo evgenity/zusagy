@@ -7,5 +7,5 @@ urlpatterns = [
     path('how', views.how, name='how'),
     path('create', views.create, name='create'),
     path('final', views.final, name='final'),
-    path('report', views.report, name='report'),
+    path('r/<str:short_link>', views.report, name='report'),
 ]

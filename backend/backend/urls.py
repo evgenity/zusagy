@@ -18,6 +18,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path(r'', include('promises.urls')),
-    path('promises/', include('promises.urls')),
     path('admin/', admin.site.urls),
 ]
