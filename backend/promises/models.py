@@ -12,4 +12,4 @@ class Promise(models.Model):
     short_link = models.CharField(max_length=200, default=generate_link)
 
     def __str__(self):
-        return str(self.name), str(self.email), str(self.short_link)
+        return ','.join([str(self.name), str(self.email), str(self.short_link)])
