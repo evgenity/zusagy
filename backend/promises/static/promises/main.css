@@ -49,6 +49,7 @@ body {
 
 .form-group {
 	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #btn-start-challenge {
@@ -66,4 +67,3 @@ body {
 	width: 70%;
 	z-index: -1;
 }
-

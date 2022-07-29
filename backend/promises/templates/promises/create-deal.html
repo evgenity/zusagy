@@ -2,24 +2,16 @@
 
 {% block content %}
 <h1>Allright, you’ve decided to quit smoking!</h1>
-<form action="{% url 'final' %}" method="post">
+
+<form action="{% url 'create' %}" method="post">
    {% csrf_token %} 
   <div class="form-group">
-    <!-- <label for="exampleInputEmail1">Email address</label> -->
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="Enter your email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <!-- <label for="exampleInputPassword1">Password</label> -->
-    <input type="name" class="form-control" id="name" name="name" placeholder="Enter your name">
-  </div>
-  
-  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-  <div class="text-center" id="btn-start-challenge">
-  <input type="submit" class="btn btn-primary btn-lg px-4 border">Start challenge!</a>
+{{form}}
+{%csrf_token%}
 </div>
-</form>
+<input type="submit" class="btn btn-primary btn-lg px-4 border" />
 
+</form>
 <div class="hero">
   <img class="hero-img" src="https://d2pas86kykpvmq.cloudfront.net/images/humans-3.0/pose_50.png">
 </div>

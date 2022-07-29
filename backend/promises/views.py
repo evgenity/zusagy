@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import PromiseForm
 from promises.models import Promise
 
@@ -14,23 +14,27 @@ def how(request):
     return render(request, 'promises/how-it-works.html')
 
 def create(request):
-    return render(request, 'promises/create-deal.html')
-
-def final(request):
     if request.method == 'POST':
-        details = PromiseForm(request.POST)
         print(request.POST['name'])
         print(request.POST['email'])
+        details = PromiseForm(request.POST)
 
         if details.is_valid(): 
             promise = details.save(commit = False)
-            promise.save() 
-            return render(request, 'promises/final-deal.html', {'promise':promise})
+            promise.save()
+            return redirect(final, promise.short_link) 
         else:
             return render(request, "promises/create-deal.html", {'form':details}) 
     else:
-        form = PromiseForm(None)  
-        return render(request, 'promises/final-deal.html', {'form':form})
+        form = PromiseForm()
+        return render(request, 'promises/create-deal.html', {'form':form})
+
+def final(request, short_link):
+    try:
+        promise = Promise.objects.get(short_link=short_link)
+    except Promise.DoesNotExist:
+        raise Http404("Promise does not exist")
+    return render(request, 'promises/final-deal.html', {'promise': promise})
 
 def report(request, short_link):
     try:
