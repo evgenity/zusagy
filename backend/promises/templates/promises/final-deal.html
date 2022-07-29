@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Allright, {{promise.name}}, you will put $100 on the line by sharing this link.</h1>
-<p class="lead text-center" id="link-for-friends"><a href="{% url 'report' promise.short_link %}">zusagy.com{% url 'report' promise.short_link %}</a></p>
+<p class="lead text-center" ><a id="link-for-friends" href="{% url 'report' promise.short_link %}">zusagy.com{% url 'report' promise.short_link %}</a></p>
 
 <ol class="list-group-numbered">
   <li class="list-group-item">Send the link to your friends, family and your smoking buddies! </li>
