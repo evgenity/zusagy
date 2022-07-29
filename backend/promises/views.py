@@ -6,4 +6,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return render(request, 'promises/index.html')
+
+def how(request):
+    return render(request, 'promises/how-it-works.html')
