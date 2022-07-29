@@ -1,7 +1,7 @@
 {% extends "promises/base.html" %}
 
 {% block content %}
-<h2 id='catch-phrase'>{{promise.name}} asks you to report if you catch them smoking. He will lose $100  </h2>
+<h2 id='catch-phrase'>{{promise.name}} asks you to report if you catch them smoking. They will lose $100 (to charity)  </h2>
 <p class="lead text-center" id="">Save this link: <a href="{% url 'report' promise.short_link %}">zusagy.com{% url 'report' promise.short_link %}</a></p>
 <h2 class="text-center">Day 1 of 100</h2>
 
@@ -10,7 +10,7 @@
 </div>
 
 <div class="text-center" id='how-it-works-button'>
-  <a href="#" class="btn btn-primary btn-lg px-4 border">Report</a>
+  <a href="#" class="btn btn-primary btn-lg px-4 border">Report smoking!</a>
   <div class="small"><a href="{% url 'how' %}" class="link-light">How it works</a><div/>
 </div>
 {% endblock %}
