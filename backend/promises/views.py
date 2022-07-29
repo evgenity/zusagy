@@ -10,3 +10,12 @@ def index(request):
 
 def how(request):
     return render(request, 'promises/how-it-works.html')
+
+def create(request):
+    return render(request, 'promises/create-deal.html')
+
+def final(request):
+    return render(request, 'promises/final-deal.html')
+
+def report(request):
+    return render(request, 'promises/reporter-main.html')

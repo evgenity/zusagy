@@ -1,57 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-	<link href="./main.css" rel="stylesheet" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira">
-	<title>Zusagy</title>
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+{% extends "promises/base.html" %}
 
-   ym(89753057, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/89753057" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-</head>
-<body>
-<div class="col-lg-8 mx-auto p-3 py-md-5">
-  <header class="d-flex align-items-center pb-3 mb-5">
-    <a href="/" class="d-flex align-items-center text-light text-decoration-none">
-      <span class="fs-4">Zusagy</span>
-      <!-- <span id="moto">friends help</span> -->
-    </a>
-  </header>
-
-  <main>
-    <h1>Allright, you put $100 on the line.</h1>
-    <a href="reporter-main.html" class="lead text-center" id="link-for-friends">zusagy.com/gjlqU</a>
+{% block content %}
+<h1>Allright, you put $100 on the line.</h1>
+<a href="{% url 'report' %}" class="lead text-center" id="link-for-friends">zusagy.com/gjlqU</a>
 
 <ol class="list-group-numbered">
   <li class="list-group-item">Here is a link for your friends. Send it also to your family and your smoking buddies! </li>
   <li class="list-group-item">Stop smoking now. Like seriously, now. Not tomorrow.</li>
   <li class="list-group-item">If you will be caught smoking - you’ll have to donate to charity and send us proofs.</li>
 </ol>
-    </p>
+</p>
 
-    <p class="lead text-center">Good luck!</p>
+<p class="lead text-center">Good luck!</p>
 
-    <div class="hero">
-    	<img class="hero-img" src="https://d2pas86kykpvmq.cloudfront.net/images/humans-3.0/pose_50.png">
-    </div>
-
-
-  </main>
+<div class="hero">
+  <img class="hero-img" src="https://d2pas86kykpvmq.cloudfront.net/images/humans-3.0/pose_50.png">
 </div>
-</body>
-</html>
+{% endblock %}
