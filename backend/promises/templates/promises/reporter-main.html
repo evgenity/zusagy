@@ -1,7 +1,7 @@
 {% extends "promises/base.html" %}
 
 {% block content %}
-<h2 id='catch-phrase'>Evgeny asks you to report if you catch them smoking. <br> He will lose $100  </h2>
+<h2 id='catch-phrase'>Evgeny asks you to report if you catch them smoking. He will lose $100  </h2>
 <h2 class="text-center">Day 1 of 100</h2>
 
 <div class="hero-main-reporter">
@@ -10,6 +10,6 @@
 
 <div class="text-center" id='how-it-works-button'>
   <a href="#" class="btn btn-primary btn-lg px-4 border">Report</a>
-  <div class="small"><a href="how-it-works.html" class="link-light">How it works</a><div/>
+  <div class="small"><a href="{% url 'how' %}" class="link-light">How it works</a><div/>
 </div>
 {% endblock %}
