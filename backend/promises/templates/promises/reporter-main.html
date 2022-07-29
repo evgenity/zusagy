@@ -2,7 +2,7 @@
 
 {% block content %}
 <h2 id='catch-phrase'>{{promise.name}} asks you to report if you catch them smoking. They will lose $100 (to charity)  </h2>
-<p class="lead text-center" id="">Save this link: <a href="{% url 'report' promise.short_link %}">zusagy.com{% url 'report' promise.short_link %}</a></p>
+<p class="lead text-center" id="">Save this link: <a id="link-for-friends" href="{% url 'report' promise.short_link %}">zusagy.com{% url 'report' promise.short_link %}</a></p>
 <h2 class="text-center">Day 1 of 100</h2>
 
 <div class="hero-main-reporter">
