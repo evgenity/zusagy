@@ -8,6 +8,13 @@
 </div>
 
 <div class="text-center" id='report-upload'>
-  <input type='file' href="#" class="btn btn-primary btn-lg px-4 border">
-</div>
+  <form id='report-upload' action="{% url 'report_upload' promise.short_link %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+      {{ form.docfile.label_tag }} {{ form.docfile.help_text }}
+      {{ form.docfile.errors }}
+      {{ form.docfile }}
+      <input type="submit" value="Upload" class="btn btn-primary btn-lg px-4 border"/>
+  </form>
+  </div>
 {% endblock %}

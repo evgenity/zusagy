@@ -15,3 +15,13 @@ class PromiseForm(ModelForm):
         super(ModelForm, self).__init__(*args, **kwargs)
         self.fields['name'].widget.attrs.update({'class': 'form-control'})
         self.fields['email'].widget.attrs.update({'class': 'form-control'})
+
+class DocumentForm(forms.Form):
+    docfile = forms.FileField(
+        label='',
+        help_text=''
+    )
+    def __init__(self, *args, **kwargs):
+        super(DocumentForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'

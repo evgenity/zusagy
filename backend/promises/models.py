@@ -13,3 +13,6 @@ class Promise(models.Model):
 
     def __str__(self):
         return ','.join([str(self.name), str(self.email), str(self.short_link)])
+
+class Document(models.Model):
+    docfile = models.FileField(upload_to='documents/%Y/%m/%d')

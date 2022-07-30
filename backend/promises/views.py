@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 from .forms import PromiseForm
-from promises.models import Promise
+from promises.models import Promise, Document
 from datetime import datetime, timezone
-
-# Create your views here.
-
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from .forms import DocumentForm
+from django.template import RequestContext
+from django.urls import reverse
 
 
 def index(request):
@@ -50,4 +50,21 @@ def report_upload(request, short_link):
         promise = Promise.objects.get(short_link=short_link)
     except Promise.DoesNotExist:
         raise Http404("Promise does not exist")
-    return render(request, 'promises/report-upload.html', {'promise': promise,})
+
+    if request.method == 'POST':
+        form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            newdoc = Document(docfile = request.FILES['docfile'])
+            newdoc.save()
+
+            # Redirect to the document list after POST
+            # return HttpResponseRedirect(reverse('promises.views.report_upload'))
+            return render(request, 'promises/report-success.html', {'promise': promise, 'form': form})
+    else:
+        form = DocumentForm() # A empty, unbound form
+
+    # Load documents for the list page
+    documents = Document.objects.all()
+
+    # Render list page with the documents and the form
+    return render(request, 'promises/report-upload.html', {'promise': promise, 'form': form})
