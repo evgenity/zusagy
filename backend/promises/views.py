@@ -44,3 +44,10 @@ def report(request, short_link):
         raise Http404("Promise does not exist")
     day_num = (datetime.now(timezone.utc) - promise.pub_date).days + 1
     return render(request, 'promises/reporter-main.html', {'promise': promise, 'day_num' : day_num})
+
+def report_upload(request, short_link):
+    try:
+        promise = Promise.objects.get(short_link=short_link)
+    except Promise.DoesNotExist:
+        raise Http404("Promise does not exist")
+    return render(request, 'promises/report-upload.html', {'promise': promise,})

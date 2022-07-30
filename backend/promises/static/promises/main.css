@@ -2,6 +2,10 @@ html, body {
     height: 100%;
 }
 
+.form-control {
+	border: none;
+}
+
 body {
 	/*background: rgba(75, 57, 94, 1);*/
 	color: white;

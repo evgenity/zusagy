@@ -10,7 +10,7 @@
 </div>
 
 <div class="text-center" id='how-it-works-button'>
-  <a href="#" class="btn btn-primary btn-lg px-4 border">Report smoking!</a>
+  <a href="{% url 'report_upload' promise.short_link %}" class="btn btn-primary btn-lg px-4 border">Report smoking!</a>
   <div class="small"><a href="{% url 'how' %}" class="link-light">How it works</a><div/>
 </div>
 {% endblock %}

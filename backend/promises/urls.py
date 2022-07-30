@@ -8,4 +8,5 @@ urlpatterns = [
     path('create', views.create, name='create'),
     path('final/<str:short_link>', views.final, name='final'),
     path('r/<str:short_link>', views.report, name='report'),
+    path('u/<str:short_link>', views.report_upload, name='report_upload')
 ]
