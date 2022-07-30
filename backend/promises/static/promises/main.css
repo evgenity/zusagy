@@ -82,6 +82,6 @@ body {
 	z-index: -1;
 }
 
-#report-upload {
+#report-upload input {
 	max-width: 100%;
 }
