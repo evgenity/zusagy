@@ -1,5 +1,9 @@
 {% extends "promises/base.html" %}
 
+{% block og_description %}
+<meta property="og:description" content="{{promise.name}} asks you to report if you catch them smoking." />
+{% endblock %}
+
 {% block content %}
 <h2 id='catch-phrase'>{{promise.name}} asks you to report if you catch them smoking. They will lose $100 (to charity)  </h2>
 <p class="lead text-center" id="">Save this link: <a id="link-for-friends" href="{% url 'report' promise.short_link %}">zusagy.com{% url 'report' promise.short_link %}</a></p>
