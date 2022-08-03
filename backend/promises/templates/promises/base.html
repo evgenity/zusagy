@@ -38,10 +38,16 @@
 </head>
 <body>
 <div class="col-lg-8 mx-auto p-3 py-md-5">
-  <header class="d-flex align-items-center pb-3 mb-5">
+  <header class="d-flex align-items-center pb-3 mb-5" style='margin-bottom: 0px !important;'>
     <a href="/" class="d-flex align-items-center text-light text-decoration-none">
       <span class="fs-4">Zusagy</span>
     </a>
+
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'advices' %}">Советы</a>
+        </li>
+    </ul>
   </header>
 
   <main>

@@ -14,6 +14,9 @@ def index(request):
 def how(request):
     return render(request, 'promises/how-it-works.html')
 
+def advices(request):
+    return render(request, 'promises/advices.html')
+
 def create(request):
     if request.method == 'POST':
         print(request.POST['name'])
