@@ -1,17 +1,17 @@
 {% extends "promises/base.html" %}
 
 {% block content %}
-<h1>Allright, {{promise.name}}, you will put $100 on the line by sharing this link.</h1>
+<h1>Окей, {{promise.name}}, вы поставите $100 на кон, поделившись этой ссылкой.</h1>
 <p class="lead text-center" ><a id="link-for-friends" href="{% url 'report' promise.short_link %}">zusagy.com{% url 'report' promise.short_link %}</a></p>
 
 <ol class="list-group-numbered">
-  <li class="list-group-item">Send the link to your friends, family and your smoking buddies! </li>
-  <li class="list-group-item">Stop smoking now. Like seriously, now. Not tomorrow.</li>
-  <li class="list-group-item">If you will be caught smoking - you’ll have to donate to charity and send us proofs. Your friends can track your progress with the link.</li>
+  <li class="list-group-item">Отправьте ссылку своим друзьям, родственникам и приятелям по курению! </li>
+  <li class="list-group-item">Прекратите курить сразу. Серьезно, прямо сейчас. Не завтра.</li>
+  <li class="list-group-item">Если вас поймают на курении - вам придется пожертвовать на благотворительность $100 и прислать нам подтверждение. Ваши друзья могут отслеживать ваши успехи по ссылке.</li>
 </ol>
 </p>
 
-<p class="lead text-center">Good luck!</p>
+<p class="lead text-center">Удачи!</p>
 
 <div class="hero">
   <img class="hero-img" src="https://d2pas86kykpvmq.cloudfront.net/images/humans-3.0/pose_50.png">

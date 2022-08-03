@@ -1,10 +1,20 @@
 {% extends "promises/base.html" %}
 
 {% block content %}
-<h1 id='catch-phrase'>You quit smoking or lose $100. <br> Friends will help! </h1>
+<h1 id='catch-phrase'>Вы бросаете курить или теряете 100 долларов. Друзья следят и помогают! </h1>
 
-<div class="text-center" id='how-it-works-button'>
-  <a href="{% url 'how' %}" class="btn btn-primary btn-lg px-4 border">How it works?</a>
+<p class="">
+  Старый проверенный способ в новом исполнении. Вы резервируете 100 долларов и отправляете своим друзьям специальную ссылку — теперь они могут сообщить, что вы курите.
+
+  <li>Если вас поймают за курением - вы теряете деньги. Они идут на благотворительность.</li>
+
+  <li>Если мы не получаем отчетов в течение 100 дней - вы получаете свои деньги обратно.</li>
+
+  <br>(*) Более половины людей, которые поспорили на деньги, бросили курить как минимум на шесть месяцев (по данным New England Journal of Medicine).
+</p>
+
+<div class="text-center">
+  <a href="{% url 'create' %}" class="btn btn-primary btn-lg px-4 border">Попробовать!</a>
 </div>
 
 <div class="hero">
