@@ -3,6 +3,10 @@ html, body {
     min-height: 100%;
 }
 
+a {
+	color: white;
+}
+
 header {
 	margin-bottom: 0.5em !important;
 }
