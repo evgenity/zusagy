@@ -7,8 +7,8 @@ header {
 	margin-bottom: 0.5em !important;
 }
 
-h1 {
-	font-size: 2em;
+h1, h2, h3 {
+	font-size: 1.5em;
 }
 
 .form-control {
