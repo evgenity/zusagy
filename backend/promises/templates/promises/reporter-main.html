@@ -5,16 +5,16 @@
 {% endblock %}
 
 {% block content %}
-<h2 id='catch-phrase'>{{promise.name}} asks you to report if you catch them smoking. They will lose $100 (to charity)  </h2>
-<p class="lead text-center" id="">Save this link: <a id="link-for-friends" href="{% url 'report' promise.short_link %}">zusagy.com{% url 'report' promise.short_link %}</a></p>
-<h2 class="text-center">Day {{day_num}} of 100</h2>
+<h2 id='catch-phrase'>{{promise.name}} просит вас сообщить, если снова будет курить. Тогда он/она переведет 5.000 рублей на благотворительность</h2>
+<p class="lead text-center" id="">Сохраните эту ссылку: <a id="link-for-friends" href="{% url 'report' promise.short_link %}">zusagy.com{% url 'report' promise.short_link %}</a></p>
+<h2 class="text-center">День {{day_num}} из 100</h2>
 
 <div class="hero-main-reporter">
   <img class="hero-main-img" src="https://d2pas86kykpvmq.cloudfront.net/images/humans-3.0/pose_31-p-800.png">
 </div>
 
 <div class="text-center" id='how-it-works-button'>
-  <a href="{% url 'report_upload' promise.short_link %}" class="btn btn-primary btn-lg px-4 border">Report smoking!</a>
-  <div class="small"><a href="{% url 'how' %}" class="link-light">How it works</a><div/>
+  <a href="{% url 'report_upload' promise.short_link %}" class="btn btn-primary btn-lg px-4 border">Сообщить!</a>
+  <!-- <div class="small"><a href="{% url 'how' %}" class="link-light">How it works</a><div/> -->
 </div>
 {% endblock %}
