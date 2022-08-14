@@ -7,7 +7,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.index, name='index'),
     path('how', views.how, name='how'),
+    path('methods', views.methods, name='methods'),
+    path('profits', views.profits, name='profits'),
     path('create', views.create, name='create'),
+    path('new', views.new, name='new'),
     path('advices', views.advices, name='advices'),
     path('final/<str:short_link>', views.final, name='final'),
     path('r/<str:short_link>', views.report, name='report'),

@@ -11,6 +11,15 @@ from django.urls import reverse
 def index(request):
     return render(request, 'promises/index.html')
 
+def methods(request):
+    return render(request, 'promises/methods.html')
+
+def profits(request):
+    return render(request, 'promises/profits.html')
+
+def new(request):
+    return render(request, 'promises/new.html')
+
 def how(request):
     return render(request, 'promises/how-it-works.html')
 
