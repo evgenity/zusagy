@@ -19,7 +19,7 @@
   <meta property="og:title" content="Zusagy: бросаем курить с помощью друзей!" />
   <meta property="og:image" content="{% static '/apple-touch-icon.png' %}" />
   {% block og_description %}{% endblock %}
-	<title>Zusagy</title>
+	<title>Zusagy: бросаем курить с помощью друзей!</title>
 
 	<!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -46,15 +46,25 @@
 
 <!--     <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'advices' %}">Советы</a>
+            <a class="nav-link" href="{% url 'create' %}"><i class="bi bi-plus-square"></i></a>
         </li>
     </ul> -->
   </header>
 
+
+
   <main>
     {% block content %}{% endblock %}
   </main>
-  
+<!--   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0">© Zusagy</p>
+
+    <ul class="nav justify-content-end">
+      <li class="nav-item col-md-4"><a href="{% url 'methods'" class="nav-link px-2">Другие способы</a></li>
+      <li class="nav-item col-md-4"><a href="{% url 'profits'" class="nav-link px-2">Польза от отказа</a></li>
+      <li class="nav-item col-md-4"><a href="{% url 'advices'" class="nav-link px-2">Советы</a></li>
+    </ul>
+  </footer> -->
 </div>
 </body>
 </html>
