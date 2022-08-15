@@ -1,7 +1,7 @@
 {% extends "promises/base.html" %}
 
 {% block content %}
-<h1>Окей, вы решили бросить курить!</h1>
+<h1>Окей, нам понадобится ваше имя и почта.</h1>
 
 <form action="{% url 'create' %}" method="post">
    {% csrf_token %} 

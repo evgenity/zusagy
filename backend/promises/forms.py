@@ -10,6 +10,11 @@ class PromiseForm(ModelForm):
  
         # Custom fields
         fields =["name", "email"]
+
+        labels = {
+            "name": "Имя",
+            "email": "Почта"
+        }
  
     def __init__(self, *args, **kwargs):
         super(ModelForm, self).__init__(*args, **kwargs)
